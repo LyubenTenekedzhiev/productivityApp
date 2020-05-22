@@ -1,0 +1,30 @@
+.LandingPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(51, 51, 51);
+}
+
+.LandingPage_Login,
+.LandingPage_Register {
+  font-size: 2.5rem;
+  color: rgb(238, 238, 238);
+  cursor: pointer;
+  transition: .5s all;
+}
+
+.LandingPage_Login:hover,
+.LandingPage_Register:hover {
+  font-size: 2.75rem;
+  border-bottom: 1px solid rgb(238, 238, 238);
+}
+
+.LandingPage_Login {
+  margin-left: 4rem;
+}
+
+.LandingPage_Register {
+  margin-right: 4rem;
+}

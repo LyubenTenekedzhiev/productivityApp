@@ -1,0 +1,38 @@
+/* background-color: rgb(51, 51, 51); */
+
+.Login {
+  width: 50vw;
+  height: 50vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.LoginButton {
+  text-decoration: none;
+  padding: 0.75rem;
+  margin: 0.75rem;
+  border-radius: 4px;
+  border: none;
+  /* color: rgb(238, 238, 238); */
+}
+/* MuiFormControl-root  */
+/* MuiInput-input */
+.MuiInputBase-input,
+.MuiInput-input {
+  color: white !important;
+}
+
+.Input {
+  color: white !important;
+}
+/* MuiFormControl-root MuiTextField-root Login_Input__1iDZA */
+/* MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required */
+.Mui-required {
+  color: white !important;
+}

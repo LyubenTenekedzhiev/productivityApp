@@ -1,0 +1,26 @@
+.Popover {
+  color: inherit;
+  font-weight: 300;
+  font-size: 2rem;
+}
+
+@media (max-width: 1700px) {
+  .Popover {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 900px) {
+  .Popover {
+    font-size: .7rem;
+  }
+}
+@media (max-width: 600px) {
+  .Popover {
+    font-size: .6rem;
+  }
+}
+@media (max-width: 400px) {
+  .Popover {
+    font-size: .5rem;
+  }
+}
