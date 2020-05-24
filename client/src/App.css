@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* background-color: rgb(51, 51, 51); */
+}
+
+.App {
+  /* overflow-x: hidden; */
+  height: 100vh;
+  /* width: 100vw; */
+  font-family: "Nunito";
+}
+
+.App_Title {
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem 1rem 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}

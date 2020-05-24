@@ -1,0 +1,29 @@
+.Task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.316);
+  width: 80%;
+  margin: 0.5rem auto 0.5rem auto;
+  border-radius: 4px;
+}
+
+.Task_Title {
+  padding: 0.75rem 0.75rem 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  word-break: break-word;
+  width: 30vw;
+  font-weight: 400;
+}
+
+.Task_Icons {
+  width: 15vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Task_Icon {
+  cursor: pointer;
+}
