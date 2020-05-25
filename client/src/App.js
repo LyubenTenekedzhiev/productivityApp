@@ -11,7 +11,7 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import "./App.css";
 
 const client = new ApolloClient({
-  uri: " https://notescatcher.herokuapp.com/",
+  uri: " https://notescatchers.herokuapp.com/graphql",
 });
 
 function App() {
