@@ -1,12 +1,18 @@
 .Tasks {
-  height: 65vh;
+  height: 70vh;
+  margin-top: 2rem;
+}
+
+.TasksArea {
+  height: 85%;
 }
 
 .Day {
   width: 80%;
   margin: 0 auto;
-  padding: 2rem 1rem 0.75rem 1rem;
+  padding: 1rem 1rem 0.75rem 1rem;
   border-bottom: 1px solid black;
+  font-size: 2.75rem;
 }
 
 .Task_Calendar {
@@ -15,47 +21,60 @@
   width: 4.5rem;
 }
 
-.TasksList_Empty {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+.Task_CalendarIcon {
+  font-size: 4rem !important;
+  margin-left: 1rem !important;
+  display: inline-block !important;
 }
 
-.TasksList_Done {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  z-index: -1;
+@media (max-width: 1575px) {
+  .Tasks {
+    height: 65vh;
+  }
+  .TasksArea {
+    height: 95%;
+  }
+  .Day {
+    padding: 1rem 1rem 0.75rem 1rem;
+    font-size: 1.3rem;
+  }
+  
+  .Task_CalendarIcon {
+    font-size: 1.75rem !important;
+  }
 }
 
-.TasksList_Img {
-  width: 50%;
-  height: 50%;
-  display: block;
+@media (max-width: 1150px) {
+  .TasksArea {
+    height: 95%;
+  }
+  .Day {
+    font-size: 1.1rem;
+  }
+  .Task_CalendarIcon {
+    font-size: 1.4rem !important;
+    margin-left: .5rem !important;
+  }
 }
 
-.TasksList_Quotes {
-  /* border: 1px solid black; */
+@media (max-width: 550px) {
+  .Day {
+    font-size: .9rem;
+  }
+  .Task_Calendar {
+    width: 3rem;
+  }
+  .Task_CalendarIcon {
+    font-size: 1.2rem !important;
+    margin-left: .25rem !important;
+  }
 }
 
-.TasksList_Quote {
-  margin: 15px 0 15px 0;
-}
-.TasksList_Quote:nth-of-type(3) {
-  margin-left: 3rem;
-}
-.TasksList_Quote:nth-of-type(2) {
-  margin-left: 1.5rem;
-  font-weight: 400;
-}
-.TasksList_Quote:nth-of-type(1) {
-  font-weight: 200;
+@media (max-width: 425px) {
+  .Day {
+    font-size: 0.8rem;
+  }
+  .Task_CalendarIcon {
+    font-size: 1rem !important;
+  }
 }

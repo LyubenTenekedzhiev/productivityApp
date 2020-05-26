@@ -64,7 +64,7 @@ function AddTask({ location, history }) {
   };
 
   return (
-    <>
+    <div className={classes.Profile}>
       <Avatar username={location.state[0]} password={location.state[1]} />
       <TasksList username={location.state[0]} password={location.state[1]} />
       <div className={classes.Form}>
@@ -83,7 +83,6 @@ function AddTask({ location, history }) {
             onChange={(e) => setDescription(e.target.value)}
             value={description}
           />
-          {/* Date Picker */}
           <MuiPickersUtilsProvider utils={DateFnsUtils}>
             <KeyboardDatePicker
               disableToolbar
@@ -105,7 +104,7 @@ function AddTask({ location, history }) {
         </form>
       </div>
       <Snackbar handleClose={handleCloseSnackbar} open={state.open} transition={state.Transition} />
-    </>
+    </div>
   );
 }
 

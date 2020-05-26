@@ -33,6 +33,7 @@ function Task({ description, date, id, removeTaskMutation, username, password, c
   useEffect(() => {
     updateTask({
       variables: { id: id, completed: completeTask },
+      refetchQueries: [{ query: getUserQuery, variables: { username: username, password: password } }],
     });
   }, [completeTask]);
 
@@ -60,7 +61,14 @@ function Task({ description, date, id, removeTaskMutation, username, password, c
 
   return (
     <>
-      <div className={classes.Task} style={completeTask ? { textDecoration: "line-through", border: "1.5px solid lightgreen" } : null}>
+      <div
+        className={classes.Task}
+        style={
+          completeTask
+            ? { textDecoration: "line-through", border: "1.5px solid lightgray", backgroundColor: "#87FF5F49" }
+            : null
+        }
+      >
         <div>
           <h4 className={classes.Task_Title}>{description}</h4>
         </div>
@@ -90,7 +98,4 @@ function Task({ description, date, id, removeTaskMutation, username, password, c
   );
 }
 
-export default compose(
-  graphql(getUserQuery, { name: "getUserQuery" }),
-  graphql(removeTaskMutation, { name: "removeTaskMutation" })
-)(withRouter(Task));
+export default compose(graphql(removeTaskMutation, { name: "removeTaskMutation" }))(withRouter(Task));

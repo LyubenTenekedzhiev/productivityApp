@@ -51,16 +51,7 @@ function TasksList({ username, password }) {
 
   let tasks = null;
   if (tasksFetched && tasksData.length === 0) {
-    tasks = (
-      <div className={classes.TasksList_Empty}>
-        <img className={classes.TasksList_Img} src={productivityImg} alt='productivity' />
-        <div className={classes.TasksList_Quotes}>
-          <h3 className={classes.TasksList_Quote}>Burning out?</h3>
-          <h3 className={classes.TasksList_Quote}>Take notes.</h3>
-          <h3 className={classes.TasksList_Quote}>Act on time.</h3>
-        </div>
-      </div>
-    );
+    tasks = <div className={classes.TasksList_Empty}></div>;
   } else if (!tasksData) {
     tasks = <Spinner />;
   } else {
@@ -70,7 +61,7 @@ function TasksList({ username, password }) {
           <h4 className={classes.Day}>
             {date === new Date().toString().slice(0, 15) ? (
               <span className={classes.Task_Calendar}>
-                Today <TodayIcon />
+                Today <TodayIcon className={classes.Task_CalendarIcon} />
               </span>
             ) : date === tomorrow.toString().slice(0, 15) ? (
               "Tomorrow"
@@ -96,20 +87,14 @@ function TasksList({ username, password }) {
             }
             return undefined;
           })}
-          <div className={classes.TasksList_Done}>
-            <img className={classes.TasksList_Img} src={tasksDone} alt='Tasks done!' />
-            {/* <div className={classes.TasksList_Quotes}>
-              <h3 className={classes.TasksList_Quote}>Conquer your dreams with small steps.</h3>
-            </div> */}
-          </div>
         </div>
       );
     });
   }
 
   return (
-    <div>
-      <ScrollToBottom className={classes.Tasks} mode='top'>
+    <div className={classes.Tasks}>
+      <ScrollToBottom className={classes.TasksArea} mode='top'>
         {tasks}
       </ScrollToBottom>
     </div>

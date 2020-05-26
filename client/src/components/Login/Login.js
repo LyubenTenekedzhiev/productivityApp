@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { withRouter } from "react-router-dom";
 import { useQuery } from "react-apollo";
 
 import { getUsersQuery } from "../../queries/queries";
@@ -36,7 +37,7 @@ function Login(props) {
       });
     }
   }, [username, password, data]);
-
+  
   const submitForm = (e) => {
     e.preventDefault();
     if (!username || !password) return;
@@ -77,4 +78,4 @@ function Login(props) {
   );
 }
 
-export default React.memo(Login);
+export default React.memo(withRouter(Login));

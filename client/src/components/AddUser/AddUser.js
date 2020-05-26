@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useQuery, useMutation } from "react-apollo";
 import { DebounceInput } from "react-debounce-input";
+import { withRouter } from "react-router-dom";
 
 import TextField from "@material-ui/core/TextField";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -107,4 +108,4 @@ function AddUser({ history }) {
     </div>
   );
 }
-export default React.memo(AddUser);
+export default React.memo(withRouter(AddUser));

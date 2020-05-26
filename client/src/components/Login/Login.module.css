@@ -1,16 +1,6 @@
-/* background-color: rgb(51, 51, 51); */
-
-.LoginPage {
-  background-image: url("../../assets/abstractBG_BW.png");
-  background-size: contain;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
 .Login {
-  width: 50vw;
-  height: 50vh;
+  width: 50%;
+  height: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -24,27 +14,37 @@
 .LoginButton {
   text-decoration: none;
   background-color: initial;
-  /* text-transform: uppercase; */
   letter-spacing: 0.5px;
-  font-size: 1.1rem;
+  font-size: 3rem;
   cursor: pointer;
   padding: 0.75rem;
   margin: 0.75rem;
   border-radius: 4px;
   border: none;
 }
-/* MuiFormControl-root  */
-/* MuiInput-input */
-.MuiInputBase-input,
-.MuiInput-input {
-  color: white !important;
+
+@media (max-width: 1575px) {
+  .LoginButton {
+    font-size: 1.1rem;
+    padding: 0.75rem;
+    margin: 0.75rem;
+  }
 }
 
-.Input {
-  color: white !important;
+@media (max-width: 650px) {
+  .LoginButton {
+    font-size: 0.9rem;
+  }
 }
-/* MuiFormControl-root MuiTextField-root Login_Input__1iDZA */
-/* MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated Mui-required Mui-required */
-.Mui-required {
-  color: white !important;
+@media (max-width: 550px) {
+  .LoginButton {
+    font-size: 0.7rem;
+    margin: 0;
+  }
+}
+
+@media (max-width: 430px) {
+  .Login {
+    top: 70%;
+  }
 }

@@ -36,10 +36,12 @@ function LetterAvatars({ username, password }) {
   return (
     <div className={classes.root}>
       <div className={styles.AvatarText}>
-        <Avatar className={colors[randomNum]}>{username.slice(0, 1).toUpperCase()}</Avatar>
+        <Avatar className={`${styles.MuiAvatar} ${colors[randomNum]}`}>{username.slice(0, 1).toUpperCase()}</Avatar>
         <h3 className={styles.AvatarName}>Welcome, {username}. Time to be productive!</h3>
       </div>
-      <NavLink to={{ pathname: "/", state: [username, password] }} className={styles.HomeLink} >Home</NavLink>
+      <NavLink to={{ pathname: "/", state: [username, password] }} className={styles.HomeLink}>
+        Home
+      </NavLink>
     </div>
   );
 }
