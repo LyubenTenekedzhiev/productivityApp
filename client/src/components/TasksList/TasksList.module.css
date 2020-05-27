@@ -59,7 +59,7 @@
 
 @media (max-width: 550px) {
   .Day {
-    font-size: .9rem;
+    font-size: .8rem;
   }
   .Task_Calendar {
     width: 3rem;
@@ -72,9 +72,9 @@
 
 @media (max-width: 425px) {
   .Day {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   .Task_CalendarIcon {
-    font-size: 1rem !important;
+    font-size: .9rem !important;
   }
 }

@@ -75,12 +75,12 @@
 }
 
 
-@media (max-width: 380px) {
+@media (max-width: 390px) {
   .AvatarName {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
   .HomeLink {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 }
 
