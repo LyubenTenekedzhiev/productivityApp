@@ -85,14 +85,7 @@ li {
   border-color: rgb(66, 201, 247);
 }
 
-@media (max-width: 1700px) {
-  .LandingPage_Login,
-  .LandingPage_Register {
-    font-size: 2rem;
-  }
-}
-
-@media (max-width: 1650px) {
+@media (max-width: 2000px) {
   .LandingPage_AppName {
     font-size: 2rem;
     letter-spacing: 3px;

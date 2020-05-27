@@ -17,7 +17,7 @@
   border: none;
 }
 
-@media (max-width: 1650px) {
+@media (max-width: 2000px) {
   .RegisterButton {
     font-size: 1.1rem;
     padding: 0.75rem;

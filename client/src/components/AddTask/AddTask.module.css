@@ -1,5 +1,5 @@
 .Profile {
-  background-image: url("../../assets/wonderland.jpg");
+  background-image: url("../../assets/wonderland2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -49,7 +49,7 @@ input {
   color: black !important
 }
 
-@media (max-width: 1650px) {
+@media (max-width: 2000px) {
   .AddTask {
     width: 50%;
   }
