@@ -35,7 +35,7 @@ function Task({ description, date, id, removeTaskMutation, username, password, c
       variables: { id: id, completed: completeTask },
       refetchQueries: [{ query: getUserQuery, variables: { username: username, password: password } }],
     });
-  }, [completeTask]);
+  }, [completeTask, id, password, updateTask, username]);
 
   const undoCompleted = () => {
     setCompleteTask(false);
@@ -63,11 +63,7 @@ function Task({ description, date, id, removeTaskMutation, username, password, c
     <>
       <div
         className={classes.Task}
-        style={
-          completeTask
-            ? { textDecoration: "line-through", border: "1.5px solid lightgray", backgroundColor: "#87FF5F49" }
-            : null
-        }
+        style={completeTask ? { textDecoration: "line-through", border: "1.5px solid lightgray", backgroundColor: "#87FF5F49" } : null}
       >
         <div>
           <h4 className={classes.Task_Title}>{description}</h4>

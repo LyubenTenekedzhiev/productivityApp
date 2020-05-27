@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useQuery, useMutation } from "react-apollo";
-import { DebounceInput } from "react-debounce-input";
 import { withRouter } from "react-router-dom";
 
 import TextField from "@material-ui/core/TextField";
-import Checkbox from "@material-ui/core/Checkbox";
 import { addUserMutation, getUsersQuery } from "../../queries/queries";
-import CustomInput from "../UI/TextField/TextField";
 import classes from "./AddUser.module.css";
 
 function AddUser({ history }) {
@@ -66,44 +63,38 @@ function AddUser({ history }) {
 
   return (
     <div className={classes.RegisterPage}>
-      <form onSubmit={(e) => submitForm(e)}>
-        <div>
-          <div className={classes.Register}>
-            <DebounceInput
-              minLength={2}
-              debounceTimeout={300}
-              element={CustomInput}
-              error={error}
-              usernameError={usernameError}
-              startWithLetterErr={startWithLetterErr}
-              username={username}
-              changed={(e) => newUsername(e)}
-              // onChange={(event) => newUsername(event)}
-              // value={username}
-            />
-            {/* <CustomInput error={error} username={username} newUsername={newUsername} /> */}
-            <TextField
-              required
-              id='standard-required'
-              label='Password'
-              type='password'
-              error={passwordError ? true : false}
-              helperText={passwordError ? "Must contain at least 5 symbols" : " "}
-              onChange={(e) => newPassword(e)}
-              value={password}
-            />
-            {/* <div className={classes.Checkbox}>
-              <Checkbox color='default' inputProps={{ "aria-label": "checkbox with default color" }} />
-              <h3 className={classes.CheckboxLabel}>I will remember my username and password</h3>
-            </div> */}
-            <button
-              className={classes.RegisterButton}
-              disabled={error || passwordError || usernameError || startWithLetterErr ? true : false}
-            >
-              Sign up
-            </button>
-          </div>
-        </div>
+      <form onSubmit={(e) => submitForm(e)} className={classes.Register}>
+        <TextField
+          required
+          autoComplete='off'
+          id='standard-required'
+          label='Username'
+          error={error || usernameError || startWithLetterErr ? true : false}
+          helperText={
+            error
+              ? "Username already exists."
+              : startWithLetterErr
+              ? "Start with a letter"
+              : usernameError
+              ? "Only alphanumeric allowed"
+              : " "
+          }
+          onChange={(e) => newUsername(e)}
+          value={username}
+        />
+        <TextField
+          required
+          id='standard-required'
+          label='Password'
+          type='password'
+          error={passwordError ? true : false}
+          helperText={passwordError ? "Must contain at least 5 symbols" : " "}
+          onChange={(e) => newPassword(e)}
+          value={password}
+        />
+        <button className={classes.RegisterButton} disabled={error || passwordError || usernameError || startWithLetterErr ? true : false}>
+          Sign up
+        </button>
       </form>
     </div>
   );

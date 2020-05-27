@@ -12,7 +12,6 @@ const client = new ApolloClient({
 });
 
 function App() {
-  const today = new Date().toString().slice(0, 15);
   return (
     <ApolloProvider client={client}>
       <div className='App'>

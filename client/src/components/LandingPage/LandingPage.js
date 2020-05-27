@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
-import phone from "../../assets/phone.png";
 import Login from "../Login/Login";
 import Register from "../AddUser/AddUser";
 import classes from "./LandingPage.module.css";
@@ -26,7 +25,6 @@ function LandingPage({ location, history }) {
         <h4 className={classes.LandingPage_Subtitle}>Increase your productivity step by step</h4>
       </div>
       <div className={classes.LandingPage_Description}>
-        {/* <img className={classes.landingPageImg} src={phone} alt='App Preview' /> */}
         <div className={classes.LandingPage_DescriptionTextContainer}>
           <h3 className={classes.LandingPage_DescriptionText}>About the app</h3>
           <p className={classes.LandingPage_DescriptionParagraph}>
@@ -41,22 +39,23 @@ function LandingPage({ location, history }) {
           </ul>
         </div>
         <div className={classes.LandingPage_Authentication}>
-          <p></p>
-          <h3 className={classes.LandingPage_Register} onClick={registerForm}>
-            Register
-          </h3>
-          <h3 className={classes.LandingPage_Login} onClick={logInForm}>
-            Login
-          </h3>
-          {location.state ? (
-            <NavLink
-              to={{ pathname: "/tasks", state: [location.state[0], location.state[1]] }}
-              style={{ textDecoration: "none", alignSelf: "flex-start" }}
-            >
-              <h3 className={classes.LandingPage_Login}>{location.state[0]}'s profile</h3>
-            </NavLink>
-          ) : null}
-          {login ? <Login /> : register ? <Register /> : <p></p>}
+          <div className={classes.LandingPage_AuthenticationButtons}>
+            <h3 className={classes.LandingPage_Register} onClick={registerForm}>
+              Register
+            </h3>
+            <h3 className={classes.LandingPage_Login} onClick={logInForm}>
+              Login
+            </h3>
+            {location.state ? (
+              <NavLink
+                to={{ pathname: "/tasks", state: [location.state[0], location.state[1]] }}
+                style={{ textDecoration: "none", alignSelf: "flex-start" }}
+              >
+                <h3 className={classes.LandingPage_Login}>Your profile</h3>
+              </NavLink>
+            ) : null}
+          </div>
+          <div className={classes.LandingPage_AuthenticationForm}>{login ? <Login /> : register ? <Register /> : <p></p>}</div>
         </div>
       </div>
     </div>

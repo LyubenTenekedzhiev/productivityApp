@@ -1,0 +1,16 @@
+
+.MuiPaper-root {
+  font-size: 2.5rem !important;
+}
+
+@media (max-width: 1700px) {
+  .MuiPaper-root {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 765px) {
+  .MuiPaper-root {
+    font-size: .7rem !important;
+  }
+}

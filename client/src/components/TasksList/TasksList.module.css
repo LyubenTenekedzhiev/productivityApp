@@ -27,7 +27,7 @@
   display: inline-block !important;
 }
 
-@media (max-width: 1575px) {
+@media (max-width: 1650px) {
   .Tasks {
     height: 65vh;
   }

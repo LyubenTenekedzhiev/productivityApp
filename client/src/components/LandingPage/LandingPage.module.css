@@ -55,8 +55,17 @@ li {
 .LandingPage_Authentication {
   position: relative;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: flex-start;
   flex-grow: 1;
+}
+.LandingPage_AuthenticationButtons {
+  display: flex;
+  justify-content: space-evenly;
+}
+.LandingPage_AuthenticationForm {
+  align-self: center;
+  margin-top: 4rem;
 }
 .LandingPage_Login,
 .LandingPage_Register {
@@ -83,7 +92,7 @@ li {
   }
 }
 
-@media (max-width: 1575px) {
+@media (max-width: 1650px) {
   .LandingPage_AppName {
     font-size: 2rem;
     letter-spacing: 3px;
@@ -144,6 +153,9 @@ li {
 }
 
 @media (max-width: 650px) {
+  .LandingPage {
+    background-size: contain;
+  }
   .LandingPage_AppName {
     font-size: 1.2rem;
     line-height: 2rem;
@@ -171,6 +183,9 @@ li {
   }
   .LandingPage_Authentication {
     height: 75%;
+  }
+  .LandingPage_AuthenticationForm {
+    margin-top: 2rem;
   }
 }
 
@@ -204,6 +219,9 @@ li {
     height: 60%;
     justify-content: space-between;
   }
+  .LandingPage_AuthenticationForm {
+    margin-top: 0rem;
+  }
 }
 @media (max-width: 430px) {
   .LandingPage {
@@ -216,14 +234,14 @@ li {
   }
   .LandingPage_DescriptionParagraph {
     width: 80vw;
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
   .LandingPage_AppName {
     font-size: 1.3rem;
     line-height: 2rem;
   }
   .LandingPage_Subtitle {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
   .LandingPage_DescriptionText {
     font-size: 1.2rem;
@@ -242,9 +260,12 @@ li {
   .LandingPage_Authentication {
     margin-top: 2rem;
   }
+  .LandingPage_AuthenticationForm {
+    margin-top: .75rem;
+  }
 }
 
-@media(max-width: 350px) {
+@media (max-width: 350px) {
   .LandingPage_Subtitle {
     font-size: 0.8rem;
   }

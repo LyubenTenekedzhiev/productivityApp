@@ -46,8 +46,7 @@ function Login(props) {
 
   return (
     <div className={classes.LoginPage}>
-      <form onSubmit={(e) => submitForm(e)}>
-        <div className={classes.Login}>
+      <form onSubmit={(e) => submitForm(e)} className={classes.Login}>
           <TextField
             required
             autoComplete='off'
@@ -72,7 +71,6 @@ function Login(props) {
           <button className={classes.LoginButton} disabled={error || passwordError ? true : false}>
             Sign in
           </button>
-        </div>
       </form>
     </div>
   );

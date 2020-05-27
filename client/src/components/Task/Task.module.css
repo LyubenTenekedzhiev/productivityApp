@@ -33,7 +33,7 @@
   display: inline-block !important;
 }
 
-@media (max-width: 1575px) {
+@media (max-width: 1650px) {
   .Task_Title {
     padding: 0.75rem 0.75rem 0.75rem 1rem;
     font-size: 1.1rem;

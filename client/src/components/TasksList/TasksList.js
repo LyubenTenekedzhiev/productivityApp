@@ -1,13 +1,11 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { useQuery } from "react-apollo";
-import ScrollToBottom, { useScrollTo } from "react-scroll-to-bottom";
+import ScrollToBottom from "react-scroll-to-bottom";
 
 import Task from "./../Task/Task";
 import Spinner from "../UI/Spinner/Spinner";
 import TodayIcon from "@material-ui/icons/Today";
 import { getUserQuery } from "../../queries/queries";
-import productivityImg from "../../assets/productivity.png";
-import tasksDone from "../../assets/tasksDone2.png";
 import classes from "./TasksList.module.css";
 
 function TasksList({ username, password }) {
